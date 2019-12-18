@@ -1,12 +1,12 @@
 package singleton;
 
 /*
- * Ë«ÖØ¼ì²éÀÁººÊ½
+ * æ‡’æ±‰å¼
  * 
 */
 public class Mgr02 {
 
-	// volatile ±ØĞëÓĞ
+	// volatile å¿…éœ€åŠ 
 	private static volatile Mgr02 INSTANCE = null;
 	
 	private Mgr02() {}

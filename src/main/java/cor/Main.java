@@ -78,7 +78,7 @@ class FilterChain implements Filter {
 	@Override
 	public Boolean doFilter(Msg m) {
 		for (Filter f : fs) {
-			// 返回false就不走后面的filters了，直接返回
+			// 杩斿洖false灏变笉璧板悗闈㈢殑filters浜嗭紝鐩存帴杩斿洖
 			if ( !f.doFilter(m) ) return false;
 		}
 		return true;

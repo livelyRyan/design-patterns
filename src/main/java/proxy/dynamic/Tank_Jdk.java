@@ -5,9 +5,9 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
 /**
- * jdk¶¯Ì¬´úÀí
- *  1. ¾ÖÏŞĞÔ: Tank_DynamicProxy±ØĞèÊµÏÖÒ»¸ö½Ó¿Ú, ·ñÔòjdk¶¯Ì¬´úÀí²»ÖªµÀ´úÀíÀàÀïÓĞÊ²Ã´·½·¨ 
- *  2. jdk¶¯Ì¬´úÀí×Ô¶¯Éú³ÉÒ»¸öĞÂÀà, ĞÂÀà»áÊµÏÖMovable½Ó¿Ú, ¼Ì³Ğ×ÔProxyÀà
+ * jdkåŠ¨æ€ä»£ç†
+ *  1. å±€é™æ€§: Tank_DynamicProxyå¿…éœ€å®ç°ä¸€ä¸ªæ¥å£, å¦åˆ™jdkåŠ¨æ€ä»£ç†ä¸çŸ¥é“ä»£ç†ç±»é‡Œæœ‰ä»€ä¹ˆæ–¹æ³• 
+ *  2. jdkåŠ¨æ€ä»£ç†è‡ªåŠ¨ç”Ÿæˆä¸€ä¸ªæ–°ç±», æ–°ç±»ä¼šå®ç°Movableæ¥å£, ç»§æ‰¿è‡ªProxyç±»
  *
  */
 public class Tank_Jdk implements Movable {
@@ -23,22 +23,22 @@ public class Tank_Jdk implements Movable {
 
 	public static void main(String[] args) {
 		/*
-		 * ±»´úÀíÀà,¼´µ±Ç°Ê¾ÀıÖĞµÄTank_DynamicProxy,ÒÔÏÂ¼ò³ÆÎªa
+		 * è¢«ä»£ç†ç±»,å³å½“å‰ç¤ºä¾‹ä¸­çš„Tank_DynamicProxy,ä»¥ä¸‹ç®€ç§°ä¸ºa
 		 * 
 		 * newProxyInstance(loader, classes, invocationHandler)
 		 * 
-		 * loader: Ö¸¶¨ÓÃÄÄ¸öÀà¼ÓÔØÆ÷À´¼ÓÔØ¶¯Ì¬Éú³ÉµÄÀà. Ò»°ã»áÓÃaµÄÀà¼ÓÔØÆ÷. Ò²¿ÉÒÔÓÃaµÄ¸¸Àà¼ÓÔØÆ÷(Àà¼ÓÔØÆ÷Ò²ÊÇÒ»¸öÊ÷×´½á¹¹),
-		   *           µ«ÊÇ²»ÄÜÖ¸¶¨ÓëaµÄÀà¼ÓÔØÆ÷Æ½ĞĞµÄÀà¼ÓÔØÆ÷, ÒòÎªÆ½ĞĞµÄÁ½¸öÀà¼ÓÔØÆ÷¼äÊı¾İ¾Í¸ôÀëÁË classes: Ö¸¶¨aÊµÏÖµÄ½Ó¿ÚÁĞ±í,
-		   *          ĞÂÉú³ÉµÄ´úÀíÀàÒ²»áÊµÏÖÖ¸¶¨µÄ½Ó¿ÚÁĞ±í 
-		 * invocationHandler: ĞÂÉú³ÉµÄÀà»á¼Ì³ĞProxyÀà,
-		 * ProxyÀàÖĞÓĞÒ»¸ö´øInvocationHandler²ÎÊıµÄ³õÊ¼»¯·½·¨.¸Ã²ÎÊıÖµ¾ÍÊÇÓÃÀ´³õÊ¼»¯µÄ.
+		 * loader: æŒ‡å®šç”¨å“ªä¸ªç±»åŠ è½½å™¨æ¥åŠ è½½åŠ¨æ€ç”Ÿæˆçš„ç±». ä¸€èˆ¬ä¼šç”¨açš„ç±»åŠ è½½å™¨. ä¹Ÿå¯ä»¥ç”¨açš„çˆ¶ç±»åŠ è½½å™¨(ç±»åŠ è½½å™¨ä¹Ÿæ˜¯ä¸€ä¸ªæ ‘çŠ¶ç»“æ„),
+		 *           ä½†æ˜¯ä¸èƒ½æŒ‡å®šä¸açš„ç±»åŠ è½½å™¨å¹³è¡Œçš„ç±»åŠ è½½å™¨, å› ä¸ºå¹³è¡Œçš„ä¸¤ä¸ªç±»åŠ è½½å™¨é—´æ•°æ®å°±éš”ç¦»äº† classes: æŒ‡å®šaå®ç°çš„æ¥å£åˆ—è¡¨,
+		 *          æ–°ç”Ÿæˆçš„ä»£ç†ç±»ä¹Ÿä¼šå®ç°æŒ‡å®šçš„æ¥å£åˆ—è¡¨ 
+		 * invocationHandler: æ–°ç”Ÿæˆçš„ç±»ä¼šç»§æ‰¿Proxyç±»,
+		 * Proxyç±»ä¸­æœ‰ä¸€ä¸ªå¸¦InvocationHandlerå‚æ•°çš„åˆå§‹åŒ–æ–¹æ³•.è¯¥å‚æ•°å€¼å°±æ˜¯ç”¨æ¥åˆå§‹åŒ–çš„.
 		 * 
 		 * 
-		   *    ·µ»ØÖµ: ObjectÀàĞÍ, ÆäÊµ¾ÍÊÇjdk¶¯Ì¬´úÀí°ïÎÒÃÇÉú³ÉµÄĞÂ´úÀíÀà, ÊµÏÖÁËMovable½Ó¿Ú.µ±ÎÒÃÇµ÷ÓÃo.move()Ê±ºò,¾Í»áµ÷ÓÃinvocationHandler.invoke()·½·¨
+		 *    è¿”å›å€¼: Objectç±»å‹, å…¶å®å°±æ˜¯jdkåŠ¨æ€ä»£ç†å¸®æˆ‘ä»¬ç”Ÿæˆçš„æ–°ä»£ç†ç±», å®ç°äº†Movableæ¥å£.å½“æˆ‘ä»¬è°ƒç”¨o.move()æ—¶å€™,å°±ä¼šè°ƒç”¨invocationHandler.invoke()æ–¹æ³•
 		 * 
 		 */
 		
-		// ±¾µØ±£´æÉú³ÉµÄ´úÀíÀà
+		// æœ¬åœ°ä¿å­˜ç”Ÿæˆçš„ä»£ç†ç±»
 //		System.getProperties().put("sun.misc.ProxyGenerator.saveGeneratedFiles", "true");
 
 		Movable o = (Movable) Proxy.newProxyInstance(Tank_Jdk.class.getClassLoader(),
@@ -66,7 +66,7 @@ class TankInvocationHandler implements InvocationHandler {
 	public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
 		before();
 		long start = System.currentTimeMillis();
-		// µ÷ÓÃmovableÊµÏÖÀà¶ÔÏóµÄmethod·½·¨
+		// è°ƒç”¨movableå®ç°ç±»å¯¹è±¡çš„methodæ–¹æ³•
 		Object result = method.invoke(movable, args);
 		System.out.println(System.currentTimeMillis() - start);
 		after();

@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /*
- * Ä£Äâ javax.servlet°üÖĞµÄFilterºÍFilterChainÊµÏÖ
+ * æ¨¡æ‹Ÿ javax.servletåŒ…ä¸­çš„Filterå’ŒFilterChainå®ç°
  * 
- * ¼ÙÉèµ±Ç°ÉèÖÃÁËÈı¸ö¹ıÂËÆ÷1, 2, 3
- * ÒªÇó´¦ÀíË³ĞòÎª : req 1 -> req 2 -> req 3 -> resp 3 -> resp 2 -> resp 1
+ * å‡è®¾å½“å‰è®¾ç½®äº†ä¸‰ä¸ªè¿‡æ»¤å™¨1, 2, 3
+ * è¦æ±‚å¤„ç†é¡ºåºä¸º : req 1 -> req 2 -> req 3 -> resp 3 -> resp 2 -> resp 1
  * 
 */
 public class ServletFilter {

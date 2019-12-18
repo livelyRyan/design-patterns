@@ -2,10 +2,10 @@ package bridge;
 
 
 /**
- * ÇÅ½ÓÄ£Ê½£º ·ÖÀë³éÏóÓë¾ßÌåÊµÏÖ£¬ÈÃËüÃÇ¿ÉÒÔ¶À×Ô·¢Õ¹
+ * æ¡¥æŽ¥æ¨¡å¼ï¼š åˆ†ç¦»æŠ½è±¡ä¸Žå…·ä½“å®žçŽ°ï¼Œè®©å®ƒä»¬å¯ä»¥ç‹¬è‡ªå‘å±•
  * 
- * GitºÍGitImplÀàÁ½Õßµ¥¶ÀÏòÏÂ·¢Õ¹£¬»¥²»Ïà¸É
- * GitÖÐ¶ÔGitImpl½øÐÐÁË¾ÛºÏ£¬ÕâÑù¾ÍÄÜ°ÑÁ½¸öÁ¬½ÓÆðÀ´
+ * Gitå’ŒGitImplç±»ä¸¤è€…å•ç‹¬å‘ä¸‹å‘å±•ï¼Œäº’ä¸ç›¸å¹²
+ * Gitä¸­å¯¹GitImplè¿›è¡Œäº†èšåˆï¼Œè¿™æ ·å°±èƒ½æŠŠä¸¤ä¸ªè¿žæŽ¥èµ·æ¥
  * 
  */
 public class Main {

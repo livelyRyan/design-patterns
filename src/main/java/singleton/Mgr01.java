@@ -1,12 +1,12 @@
 package singleton;
 
 /*
- * ¶öººÊ½
+ * é¥¿æ±‰å¼
  * 
 */
 public class Mgr01 {
 
-	// Èç¹û´æÔÚÊÍ·Å×ÊÔ´µÄÇé¿ö, Ôòfinal²»ÄÜ¼Ó¡£ ·ñÔò½¨Òé¼ÓÉÏ
+	// å¦‚æœå­˜åœ¨é‡Šæ”¾èµ„æºçš„æƒ…å†µ, åˆ™finalä¸èƒ½åŠ ã€‚ å¦åˆ™å»ºè®®åŠ ä¸Š,ä»£è¡¨ä¸å¯ä¿®æ”¹
 	private static final Mgr01 INSTANCE = new Mgr01();
 
 //	public void releaseInstance(){ 

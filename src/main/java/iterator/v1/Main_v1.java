@@ -1,11 +1,11 @@
 package iterator.v1;
 
 /*
- * µü´úÆ÷Ä£Ê½, ×¨ÃÅÕë¶ÔÈİÆ÷ÀàµÄµü´ú
+ * è¿­ä»£å™¨æ¨¡å¼, ä¸“é—¨é’ˆå¯¹å®¹å™¨ç±»çš„è¿­ä»£
  * 
- * v1°æ±¾, ¼òµ¥ÊµÏÖÁËArrayList_ºÍLinkedList_Àà
+ * v1ç‰ˆæœ¬, ç®€å•å®ç°äº†ArrayList_å’ŒLinkedList_ç±»
  * 
- * ´ËÊ±ÓĞ¸öĞèÇó: ±éÀúarrsºÍlinkeds, ÒªÇó¾ßÓĞÍ¨ÓÃĞÔ, ¼´²»ÄÜÕë¶ÔÌØ¶¨ÊµÏÖĞ´ÌØ¶¨±éÀú´úÂë
+ * æ­¤æ—¶æœ‰ä¸ªéœ€æ±‚: éå†arrså’Œlinkeds, è¦æ±‚å…·æœ‰é€šç”¨æ€§, å³ä¸èƒ½é’ˆå¯¹ç‰¹å®šå®ç°å†™ç‰¹å®šéå†ä»£ç 
  * 
  * 
 */
@@ -24,7 +24,6 @@ public class Main_v1 {
 		}
 		System.out.println(linkeds.size());
 		
-		// TODO ĞèÒª±éÀúarrsºÍlinkeds
 	}
 
 }
@@ -100,7 +99,7 @@ class ArrayList_ implements Collection_ {
 	
 }
 
-// ÈİÆ÷½Ó¿Ú, ËùÓĞÈİÆ÷¶¼ÊµÏÖ¸Ã½Ó¿Ú
+// å®¹å™¨æ¥å£, æ‰€æœ‰å®¹å™¨éƒ½å®ç°è¯¥æ¥å£
 interface Collection_ {
 	int add(Object o);
 	int size();

@@ -7,7 +7,7 @@ import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;
 
 /**
- * cglib´úÀí
+ * cglibä»£ç†
  *
  */
 public class Tank_Cglib {
@@ -23,11 +23,11 @@ public class Tank_Cglib {
 
 	public static void main(String[] args) {
 		Enhancer enhancer = new Enhancer();
-		// ÉèÖÃ¶¯Ì¬Éú³ÉÀàµÄ¸¸Àà
+		// è®¾ç½®åŠ¨æ€ç”Ÿæˆç±»çš„çˆ¶ç±»
 		enhancer.setSuperclass(Tank_Cglib.class);
-		// ÉèÖÃ»Øµ÷Àà
+		// è®¾ç½®å›è°ƒç±»
 		enhancer.setCallback(new TankMethodHandler());
-		// ´´½¨Ò»¸ö¶¯Ì¬Éú³ÉÀà¶ÔÏóÊµÀı
+		// åˆ›å»ºä¸€ä¸ªåŠ¨æ€ç”Ÿæˆç±»å¯¹è±¡å®ä¾‹
 		Tank_Cglib tank = (Tank_Cglib)enhancer.create();
 		tank.move();
 	}
@@ -44,10 +44,10 @@ class TankMethodHandler implements MethodInterceptor {
 	}
 
 	/**
-	 * o: ¶¯Ì¬Éú³ÉµÄÀà
-	 * method: À¹½ØµÄÀà, ¼´ move();
-	 * args: ·½·¨µÄ²ÎÊı
-	 * methodProxy: ´øÓĞµ÷ÓÃ·½·¨×¢²áĞÅÏ¢µÄÀà. µ±À¹½ØµÄ·½·¨±»µ÷ÓÃÊ±,·½·¨ĞÅÏ¢»á×¢²áµ½¸ÃÀàÖĞ
+	 * o: åŠ¨æ€ç”Ÿæˆçš„ç±»
+	 * method: æ‹¦æˆªçš„ç±», å³ move();
+	 * args: æ–¹æ³•çš„å‚æ•°
+	 * methodProxy: å¸¦æœ‰è°ƒç”¨æ–¹æ³•æ³¨å†Œä¿¡æ¯çš„ç±». å½“æ‹¦æˆªçš„æ–¹æ³•è¢«è°ƒç”¨æ—¶,æ–¹æ³•ä¿¡æ¯ä¼šæ³¨å†Œåˆ°è¯¥ç±»ä¸­
 	 *
 	 */
 	@Override

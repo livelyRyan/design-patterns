@@ -1,6 +1,6 @@
 package bridge;
 
-// Gift有属性GiftImpl, 因此设计为抽象类
+// Gift鏈夊睘鎬iftImpl, 鍥犳璁捐涓烘娊璞＄被
 public abstract class Gift {
 
 	public GiftImpl giftImpl = null;

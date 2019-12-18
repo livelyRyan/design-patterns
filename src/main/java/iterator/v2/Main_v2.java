@@ -1,27 +1,27 @@
 package iterator.v2;
 
 /*
- * ������ģʽ, ר�����������ĵ���
+ * 迭代器模式, 专门针对容器类的迭代
  * 
- * v1�汾, ��ʵ����ArrayList_��LinkedList_��
+ * v1版本, 简单实现了ArrayList_和LinkedList_类
  * 
- * ��ʱ�и�����: ����arrs��linkeds, Ҫ�����ͨ����, ����������ض�ʵ��д�ض���������
+ * 此时有个需求: 遍历arrs和linkeds, 要求具有通用性, 即不能针对特定实现写特定遍历代码
  * 
- * ���ڸ���Collection_ʵ�����в�ͬ�ĵײ�ṹ, ����������������ݲ�ͬʵ��д��ͬ�ı����߼�����, ������������:
- * 1. ��������û��ͨ����
- * 2. ���ܻ��ƻ���ķ�װ��,��Ϊ��Щ���Կ�����ԭ��������Ⱪ¶��, Ϊ��������ʵ�ֱ��������ò����б�¶
+ * 由于各个Collection_实现类有不同的底层结构, 因此如果在类外面根据不同实现写不同的遍历逻辑代码, 会有以下问题:
+ * 1. 遍历代码没有通用性
+ * 2. 可能会破坏类的封装性,因为有些属性可能类原本不想对外暴露的, 为了在外面实现遍历而不得不进行暴露
  * 
- * ����취: ����iterator_�ӿ�, ���������ڲ�ʵ�־���ĵ����߼�.
- * 		      ��������������, ����ͨ�õĽӿڷ������б���.
+ * 解决办法: 定义iterator_接口, 在容器类内部实现具体的迭代逻辑.
+ * 		      而对于外层调用者, 调用通用的接口方法进行遍历.
  * 
- * ����: �ҳ��仯����ȶ���, �仯����ʵ�����ڲ��Լ�ʵ��, �ȶ����ýӿڽ���Լ������¶���ⲿ, ��ʵ���ⲿ���õ�ͨ����.
+ * 核心: 找出变化点和稳定点, 变化点在实现类内部自己实现, 稳定点用接口进行约定并暴露给外部, 以实现外部调用的通用性.
  * 
- * �仯��: ÿ������ʵ��������߼���һ��;
- * �ȶ���: ������ʱ��,ֻ�漰��������: 
- * 		 1. �������Ƿ�����һ��Ԫ��;
- * 		 2. ������������һ��Ԫ��;
+ * 变化点: 每个容器实现类遍历逻辑不一样;
+ * 稳定点: 遍历的时候,只涉及两个问题: 
+ * 		 1. 容器中是否有下一个元素;
+ * 		 2. 返回容器的下一个元素;
  * 
- * tp: �˴�ע�����ģʽ, ��������ʵ�ֽ���ʾ��, ��Ҫ�
+ * tp: 此处注重设计模式, 容器代码实现仅做示例, 不要深究
  * 
 */
 public class Main_v2 {
@@ -42,11 +42,11 @@ public class Main_v2 {
 	}
 
 	public static void traversalAndPrint(iterator_ iterator, String typee) {
-		System.out.println("---���� " + typee + "---");
+		System.out.println("---遍历 " + typee + "---");
 		while (iterator.hasNext()) {
 			System.out.println(iterator.next());
 		}
-		System.out.println("---���� " + typee + " ����---");
+		System.out.println("---遍历 " + typee + " 结束---");
 	}
 }
 
@@ -164,7 +164,7 @@ interface iterator_ {
 	Object next();
 }
 
-// �����ӿ�, ����������ʵ�ָýӿ�
+// 容器接口, 所有容器都实现该接口
 interface Collection_ {
 	int add(Object o);
 

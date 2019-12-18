@@ -3,9 +3,9 @@ package proxy.static_;
 import java.util.Random;
 
 /*
- * ¾²Ì¬´úÀí£¬ ÏÔÊ¾´´½¨´úÀíÀà
+ * é™æ€ä»£ç†ï¼Œ æ˜¾ç¤ºåˆ›å»ºä»£ç†ç±»
  * 
- * Ğ´·¨ºÍDecoratorºÜÏñ
+ * å†™æ³•å’ŒDecoratorå¾ˆåƒ
 */
 public class Tank implements Movable {
 	public void move() {

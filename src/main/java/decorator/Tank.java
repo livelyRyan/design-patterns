@@ -1,8 +1,8 @@
 package decorator;
 
 /*
- * ×°ÊÎÆ÷Àà£¬
- * ÓÃÓÚÔöÇ¿ÀàµÄ¹¦ÄÜ
+ * è£…é¥°å™¨ç±»ï¼Œ
+ * ç”¨äºå¢å¼ºç±»çš„åŠŸèƒ½
  * 
 */
 public class Tank implements GameObject {
@@ -44,11 +44,11 @@ class AutoTankDecorator extends TankDecorator {
 	}
 	
 	private void before() {
-		System.out.println("¿ªÆô×Ô¶¯Ñ²º½ÏµÍ³");
+		System.out.println("å¼€å¯è‡ªåŠ¨å·¡èˆªç³»ç»Ÿ");
 	}
 	
 	private void after() {
-		System.out.println("µ½´ïÄ¿µÄµØ£¬×Ô¶¯Í£Ö¹");
+		System.out.println("åˆ°è¾¾ç›®çš„åœ°ï¼Œè‡ªåŠ¨åœæ­¢");
 	}
 	public void move() {
 		before();
@@ -64,11 +64,11 @@ class PersonDrivedTankDecorator extends TankDecorator {
 	}
 	
 	private void before() {
-		System.out.println("²ÈÓÍÃÅ");
+		System.out.println("è¸©æ²¹é—¨");
 	}
 	
 	private void after() {
-		System.out.println("²ÈÉ²³µ");
+		System.out.println("è¸©åˆ¹è½¦");
 	}
 
 	public void move() {
